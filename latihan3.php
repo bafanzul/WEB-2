@@ -64,7 +64,7 @@ foreach ($katalog_hewan as $hewan) {
     
     <div class="hewanx">
         <h2>Kanguru</h2>
-        <img src="img/kanguru.jpg" alt="kanguru">
+        <img src="img/kangguru.jpg" alt="kangguru">
         <h3>Kanguru adalah mamalia marsupial yang berasal dari Australia. Marsupial adalah kelompok mamalia yang ditandai dengan adanya kantung atau kantong marsupium.</h3>
     </div>
 
