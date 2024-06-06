@@ -1,6 +1,6 @@
 <?php
 //koneksi ke database
-$koneksi = mysqli_connect("localhost", "root", "", "katalogpropertirumah");
+$koneksi = mysqli_connect("localhost", "root", "", "mykomik");
 
 function query ($query)
 {
@@ -16,18 +16,16 @@ function query ($query)
 function tambah($data)
 {
     global $koneksi;
-    $noid = htmlspecialchars($_data["noid"]);
-    $Type_Perumahan = htmlspecialchars($_data["Type_Perumahan"]);
-    $deskripsi = htmlspecialchars($_data["deskripsi"]);
-    $harga = htmlspecialchars($_data["harga"]);
-    $jumlah = htmlspecialchars($_data["jumlah"]);
-    $img = htmlspecialchars($_data["img"]);
-    $category = htmlspecialchars($_data["category"]);
+    $Noid = htmlspecialchars($_data["Noid"]);
+    $Judul = htmlspecialchars($_data["Judul"]);
+    $Genre = htmlspecialchars($_data["Genre"]);
+    $Vol = htmlspecialchars($_data["Vol"]);
+    
 
       //query insert ke database
-      $query = "insert into properti
+      $query = "insert into komiku
       VALUES
-      ('','$noid','$Type_Perumahan','$deskripsi','$harga','$jumlah','$img','$category')
+      ('','$Noid','$Judul','$Genre','$Vol')
       ";
       
       mysqli_qeury($koneksi,$query);
@@ -37,6 +35,6 @@ function tambah($data)
     function hapus($noid)
     {
         global $koneksi;
-        mysqli_query($koneksi, "delete from properti where noid = $noid");
+        mysqli_query($koneksi, "delete from komiku where Noid = $Noid");
         return mysqli_affected_rows($koneksi);
     }
