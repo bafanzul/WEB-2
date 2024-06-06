@@ -1,10 +1,6 @@
 <?php
-//koneksi ke database
-$koneksi = mysqli_connect("localhost", "root", "", "mykomik");
-
-// ambil data dari tabel 
-$result = mysqli_query($koneksi, "SELECT * FROM komiku");
-
+require 'function.php';
+$mykomik = query("SELECT * FROM komiku");
 ?>
 
 <!DOCTYPE html>
@@ -12,37 +8,41 @@ $result = mysqli_query($koneksi, "SELECT * FROM komiku");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data List Komik</title>
+    <title>Database Komik</title>
 </head>
 <body>
     <h1>Daftar Komik</h1>
+    <a href="tambah.php">Add List Komik</a>
+    <br></br>
 
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>Noid</th>
+            <th>Aksi</th>
             <th>Judul</th>
             <th>Genre</th>
-            <th>Vol</th>
-            <th>Gambar</th>
+            <th>Volume</th>
+            <th>Gambar</th> 
         </tr>
 
         <?php $i = 1; ?>
-        <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+        <?php foreach ($mykomik as $row) : ?>
         <tr>
             <td><?= $i ?></td>
             <td>
-                <a href="">Ubah</a>
-                <a href="">Hapus</a>
+                <a href="ubah.php?Noid=<?= $row['Noid']; ?>">Ubah</a>
+                <a href="hapus.php?Noid=<?= $row['Noid']; ?>">Hapus</a>
             </td>
             <td><?= $row['Judul'] ?></td>
             <td><?= $row['Genre'] ?></td>
-            <td><?= $row['Volume'] ?></td>
+            <td><?= $row['Vol'] ?></td>
 			<td>
-            <img src="img/<?= $row['img'] ?>" width="50">
+                <img src="img/<?= $row['img'] ?>" width="50">
             </td>
+			
         </tr>
         <?php $i++ ?>
-        <?php endwhile ?>
+        <?php endforeach; ?>
     </table>
 
 </body>

@@ -6,7 +6,8 @@ if ( hapus($Noid) > 0) {
     <script>
     alert('data berhasil disimpan!');
     document.location.href = 'index.php';
-    </script>";
+    </script>
+    ";
 } else {
     echo "
     <script>
