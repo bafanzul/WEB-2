@@ -1,7 +1,7 @@
 <?php
 $id = $_GET["Noid"];
 
-if ( hapus($noid) > 0) {
+if ( hapus($Noid) > 0) {
     echo "
     <script>
     alert('data berhasil disimpan!');

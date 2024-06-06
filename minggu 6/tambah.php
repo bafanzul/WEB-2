@@ -33,19 +33,19 @@ if (isset($_POST["submit"])){
     <form action="" method="POST">
         <ul>
             <li>
-                <label for="Noid">NoId</label>
+                <label for="Noid">NoId :</label>
                 <input type="text" nama="Noid" id="Noid" required>
             </li>
             <li>
-                <label for="Judul">Judul</label>
+                <label for="Judul">Judul :</label>
                 <input type="text" nama="Judul" id="Judul" required>
             </li>
             <li>
-                <label for="Genre">Genre</label>
+                <label for="Genre">Genre :</label>
                 <input type="text" nama="Genre" id="Genre" required>
             </li>
             <li>
-                <label for="img">Gambar</label>
+                <label for="img">Gambar :</label>
                 <input type="text" nama="img" id="img" required>
             </li>
             <br>
