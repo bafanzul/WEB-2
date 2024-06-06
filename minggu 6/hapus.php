@@ -1,5 +1,5 @@
 <?php
-$id = $_GET["noid"];
+$id = $_GET["Noid"];
 
 if ( hapus($noid) > 0) {
     echo "

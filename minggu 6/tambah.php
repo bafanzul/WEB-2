@@ -33,32 +33,20 @@ if (isset($_POST["submit"])){
     <form action="" method="POST">
         <ul>
             <li>
-                <label for="noid">NoId</label>
-                <input type="text" nama="noid" id="noid" required>
+                <label for="Noid">NoId</label>
+                <input type="text" nama="Noid" id="Noid" required>
             </li>
             <li>
-                <label for="Type_Perumahan">Type_Perumahan</label>
-                <input type="text" nama="Type_Perumahan" id="Type_Perumahan" required>
+                <label for="Judul">Judul</label>
+                <input type="text" nama="Judul" id="Judul" required>
             </li>
             <li>
-                <label for="deskripsi">deskripsi</label>
-                <input type="text" nama="deskripsi" id="deskripsi" required>
+                <label for="Genre">Genre</label>
+                <input type="text" nama="Genre" id="Genre" required>
             </li>
             <li>
-                <label for="harga">harga</label>
-                <input type="text" nama="harga" id="harga" required>
-            </li>
-            <li>
-                <label for="jumlah">jumlah</label>
-                <input type="text" nama="jumlah" id="jumlah" required>
-            </li>
-            <li>
-                <label for="img">img</label>
+                <label for="img">Gambar</label>
                 <input type="text" nama="img" id="img" required>
-            </li>
-            <li>
-                <label for="category">category</label>
-                <input type="text" nama="category" id="category" required>
             </li>
             <br>
             <br>
