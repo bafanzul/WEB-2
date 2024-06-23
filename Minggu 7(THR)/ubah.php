@@ -33,14 +33,14 @@ if(isset($_POST["submit"])){
     <link rel="stylesheet" href="hias.css">  
 </head>
 <body>
-    <h1>Ubah Data Properti</h1>
+    <h1>Ubah Data Komik</h1>
     <form action="" method="POST">
-    <input type="hidden" name="id" value="<?= $properti["id"];?>">
+    <input type="hidden" name="id" value="<?= $komiku["Noid"];?>">
         <ul>
 
             <li>
-                <label for="Type_Perumahan">type perumahan :</label>
-                <input type="text" name="Type_Perumahan" required id="Type_Perumahan" value="<?= $properti["Type_Perumahan"];?>">
+                <label for="Judul">Judul :</label>
+                <input type="text" name="Judul" required id="Judul" value="<?= $komiku["Judul"];?>">
             </li>
             <li>
                 <label for="deskripsi">deskripsi :</label>
