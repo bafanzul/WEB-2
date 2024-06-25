@@ -113,7 +113,7 @@ if(isset($_POST['addproduk'])){
     $hitung2 = mysqli_fetch_array($hitung1);
     $stocksekarang = $hitung2['stock'];
 
-    if($stocksekarang>=qty){
+    if($stocksekarang>=$qty){
     //kurangin stocknya dengan jumlah yang akan dikeluarkan
     $selisih = $stocksekarang - $qty;
 
