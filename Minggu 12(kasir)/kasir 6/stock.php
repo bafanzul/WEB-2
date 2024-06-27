@@ -1,4 +1,4 @@
-<?php
+ <?php
 require 'ceklogin.php';
 $barang = mysqli_query($koneksi, "SELECT * from produk");
 
@@ -109,7 +109,9 @@ $h2 = mysqli_num_rows($barang);
                                             <td><?= $brg['deskripsi']; ?></td>
                                             <td><?= $brg['harga']; ?></td>
                                             <td><?= $brg['stock']; ?></td>
-                                            <td><a href=""> Edit | Delete </a></td>
+                                            <td><a href=" " class="btn btn-primary" target="_blank">Edit</a> | <a href=" " class="btn btn-primary" target="_blank">
+                                                Delete</a>
+                                            </td>
                                         </tr>
                                         <?php $i++; ?>
                                         <?php endforeach ?>

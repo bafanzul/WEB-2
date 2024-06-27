@@ -40,7 +40,7 @@ $h2 = mysqli_num_rows($pelanggan);
                         </a>
                         <a class="nav-link" href="stock.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Stok Barang
+                            Stok Barang Masuk
                         </a>
                         <a class="nav-link" href="masuk.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>

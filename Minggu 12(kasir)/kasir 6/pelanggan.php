@@ -102,7 +102,10 @@ $h2 = mysqli_num_rows($pelanggan);
                                             <td><?= $pl['nama_pelanggan']; ?></td>
                                             <td><?= $pl['notelp']; ?></td>
                                             <td><?= $pl['alamat']; ?></td>
-                                            <td><a href = ""> Edit | Delete </a></td>
+                                            <td><a href=" " class="btn btn-primary" target="_blank">Edit</a> |
+                                            <a href=" " class="btn btn-primary" target="_blank">
+                                            Delete</a>
+                                            </td>
                                         </tr>
                                         <?php $i++; ?>
                                         <?php endforeach; ?>

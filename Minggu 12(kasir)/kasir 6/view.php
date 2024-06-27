@@ -118,7 +118,9 @@ if(isset($_GET['idp'])){
                                             <td>Rp.<?= number_format($harga); ?></td>
                                             <td><?= number_format($qty); ?></td>
                                             <td>Rp.<?= number_format($subtotal); ?></td>    
-                                            <td>Tampilkan | Delete</td>
+                                            <td><a href=" " class="btn btn-primary" target="_blank">Edit</a> | <a href=" " class="btn btn-primary" target="_blank">
+                                                Delete</a>
+                                            </td>
                                         </tr>
                                         <?php 
                                             }; 
@@ -184,6 +186,19 @@ if(isset($_GET['idp'])){
         <input type="hidden" name="idp" value="<?= $idp; ?>">
       </div>
 
+    <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">Tambah Data Pesanan</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="text" name="nama_pelanggan" class="form-control mt-3" placeholder="nama pelanggan">
+        <input type="text" name="notelp" class="form-control mt-3" placeholder="notelp">
+        <input type="num" name="alamat" class="form-control mt-3" placeholder="alamat">
+      </div>
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" name="addproduk">Simpan</button>

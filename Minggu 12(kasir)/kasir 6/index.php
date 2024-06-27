@@ -119,7 +119,8 @@ $h2 = mysqli_num_rows($h1);
                                             <td><?= $nama_pelanggan; ?> - <?= $alamat ?> </td>
                                             <td><?= $id_pesanan ?></td>
                                             <td>Jumlah</td>
-                                            <td><a href="view.php?idp= <?= $id_pesanan; ?>" class="btn btn-primary" target="_blank">Tampilkan</a> | Delete</td>
+                                            <td><a href="view.php?idp= <?= $id_pesanan; ?>" class="btn btn-primary" target="_blank">Tampilkan</a> | <a href=" " class="btn btn-primary" target="_blank">
+                                            Delete</a></td>
                                         </tr>
                                         <?php 
                                             }; 
