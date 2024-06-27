@@ -1,10 +1,13 @@
 <?php
 session_start();
+
 $koneksi = mysqli_connect('localhost','root','','kasir');
+
 if (isset($_POST['login'])){
-    //initial variable
+    
     $username = $_POST['username'];
     $password = $_POST['password'];
+
     $check = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username' AND password='$password'");
     $hitung = mysqli_num_rows($check);
     if($hitung>0){
@@ -57,6 +60,27 @@ if(isset($_POST['tambahpelanggan'])){
         echo'
         <script>
         alert("gagal tambah pelanggan")
+        window.location.href="pelanggan.php"
+        </script>';
+    }
+}
+
+if(isset($_POST['ubahpelanggan'])){
+    //deskripsi initial variabel
+    $id_pelanggan = $_POST['$id_pelanggan'];
+    $nama_pelanggan = $_POST['nama_pelanggan'];
+    $notelp = $_POST['notelp'];
+    $alamat = $_POST['alamat'];
+
+    $update_pelanggan = mysqli_query($koneksi, "UPDATE pelanggan set (nama_pelanggan, notelp, alamat) VALUES where id_pelanggan = $id_pelanggan
+    ('$nama_pelanggan', '$notelp', '$alamat')");
+
+    if ($insert_pelanggan){
+        header('location:pelanggan.php');
+    }else{
+        echo'
+        <script>
+        alert("gagal Rubah Data Pelanggan")
         window.location.href="pelanggan.php"
         </script>';
     }
@@ -122,16 +146,19 @@ if(isset($_POST['addproduk'])){
     ('$idp', '$id_produk', '$qty')");
     $update = mysqli_query($koneksi,"UPDATE produk SET stock='$selisih' WHERE id_produk='$id_produk'");
 
-    if ($insert && $update) {
+    if ($insert && $update) 
+    {
         header('location:view.php?idp=' . $idp);
-    }else {
+    }else 
+    {
         echo'
         <script>
         alert("Gagal Tambah Produk")
         window.location.href="view.php' . $idp .'"
         </script>';
     }
-    }else {
+    }else 
+    {
         echo'
         <script>
         alert("Stock tidak cukup")

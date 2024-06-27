@@ -37,7 +37,7 @@ $h2 = mysqli_num_rows($barang);
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
-                                Stock Barang
+                                Stock Barang Masuk
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-folder"></i></div>
@@ -64,7 +64,7 @@ $h2 = mysqli_num_rows($barang);
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Stock Barang</h1>
+                        <h1 class="mt-4">Stock Barang Masuk</h1>
                         <ol class="breadcrumb mb-4">
                         </ol>
                         <div class="row">

@@ -36,7 +36,7 @@ $h2 = mysqli_num_rows($pelanggan);
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
-                                Stock Barang
+                                Stock Barang Masuk
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-folder"></i></div>
@@ -102,7 +102,7 @@ $h2 = mysqli_num_rows($pelanggan);
                                             <td><?= $pl['nama_pelanggan']; ?></td>
                                             <td><?= $pl['notelp']; ?></td>
                                             <td><?= $pl['alamat']; ?></td>
-                                            <td><a href=" " class="btn btn-primary" target="_blank">Edit</a> |
+                                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">Edit</button> |
                                             <a href=" " class="btn btn-primary" target="_blank">
                                             Delete</a>
                                             </td>
@@ -154,6 +154,33 @@ $h2 = mysqli_num_rows($pelanggan);
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" name="tambahpelanggan">Simpan</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+      </div>
+      </form>
+    </div>
+  </div>
+    <!-- modal rubah -->
+  <div class="modal" id="myModal1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Rubah Data Pelanggan</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="text" name="nama_pelanggan" class="form-control mt-3" placeholder="nama pelanggan">
+        <input type="text" name="notelp" class="form-control mt-3" placeholder="notelp">
+        <input type="num" name="alamat" class="form-control mt-3" placeholder="alamat">
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success" name="ubahpelanggan">Simpan</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
       </div>
       </form>
